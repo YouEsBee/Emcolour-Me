@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Emcolour Me",
+  "version": "1.0",
+  "description": "Helps color-deficient users by applying filters to images.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": ["activeTab", "scripting", "storage"]
+}
