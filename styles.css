@@ -1,0 +1,76 @@
+body {
+    width: 200px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+  }
+  .gear-icon {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+  }
+  .gear-icon:hover {
+    filter: brightness(0.8);
+  }
+  .settings {
+    display: none;
+  }
+  .settings-font{
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  #deficiencyDisplay {
+    font-size: 1.2em;
+  }
+  .button-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .settings-header-container {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    height: 25px;
+  }
+  #applyFilter {
+    background-color: rgb(36, 77, 191);
+    text-align: center;
+    color: white;
+    width: 80px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+  }
+  #applyFilter:hover {
+    background-color: rgb(12, 12, 100);
+  }
+  #removeFilter, #saveSetting {
+    background-color: rgb(222, 222, 222);
+    text-align: center;
+    color: black;
+    width: 80px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+  }
+  #removeFilter:hover, #saveSetting:hover {
+    background-color: rgb(174, 174, 174);
+  }
+  .gemini-box {
+    width: 190px;
+    font-size: 12px;
+  }
+  .gemini-label {
+    position: absolute;
+    left: 42px;
+    color: grey;
+    font-size: 0.8em;
+  }
+  #loadingText {
+    font-style: italic;
+    color: grey;
+  }
