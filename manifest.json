@@ -2,18 +2,23 @@
   "manifest_version": 3,
   "name": "Emcolour Me",
   "version": "1.0",
-  "description": "Helps color-deficient users by applying filters to images.",
+  "permissions": ["activeTab", "storage", "scripting"],
+  "description": "Empower our world, colour our world. Emcolour Me provides one click access to your colour vision needs, enhanced with on-device Gemini.",
   "action": {
-    "default_popup": "popup.html"
-  },
-  "background": {
-    "service_worker": "background.js"
+      "default_popup": "popup.html",
+      "default_icon": "emcolour-me-icon-sm.png"
   },
   "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"]
-    }
+      {
+          "matches": ["<all_urls>"],
+          "js": ["popup.js"]
+      }
   ],
-  "permissions": ["activeTab", "scripting", "storage"]
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  },
+  "icons": {
+    "48": "emcolour-me-icon-sm.png",
+    "128": "emcolour-me-icon-128.png"
+  }
 }
