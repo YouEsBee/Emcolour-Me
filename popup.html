@@ -2,10 +2,72 @@
 <html>
 <head>
   <title>Emcolour Me</title>
+
+  <!-- Styling sheet -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
 </head>
 <body>
-  <h1>Emcolour Me</h1>
-  <button id="applyFilter">Apply Filter</button>
+
+  <!-- Header and Settings Btn -->
+  <img id="openSettings" class="gear-icon" src="gear-icon.png" alt="Settings" id="changeSetting" />
+  <img src="emcolour-me-icon.png" alt="Emcolour Me"/>
+  <br><br>
+
+  <!-- Colour Deficiency Profile Status Display -->
+  <p id="currentSetting">Current deficiency profile:</p>
+  <p id="currentSetting"><span id="deficiencyDisplay">None</span></p>
+  <p id="loadingText"></p>
+  <br><br>
+
+  <!-- Action Buttons -->
+  <div class="button-container">
+    <button id="applyFilter">Apply</button>
+    <button id="removeFilter">Remove</button>
+  </div>
+
+  <!-- Settings -->
+  <div class="settings" id="settings">
+    <br><br>
+    <hr>
+    <br>
+    <div class="settings-header-container">
+      <p class="settings-font">Settings</p>
+      <button id="saveSetting">Save</button>
+    </div>
+    
+    <!-- Radio Buttons -->
+    <h4>Select Colour Deficiency:</h4>
+    <div>
+      <label><input type="radio" name="deficiency" value="none"> None</label><br>
+      <label><input type="radio" name="deficiency" value="red-green"> Red-Green</label><br>
+      <label><input type="radio" name="deficiency" value="green-red"> Green-Red</label><br>
+      <label><input type="radio" name="deficiency" value="blue-yellow"> Blue-Yellow</label><br>
+    </div>
+    
+    <br>
+
+    <!-- Checkbox for optional colour overlay -->
+    <input type="checkbox" id="overlayCheckbox" name="enableColourOverlay" value="enabled">
+    <label for="overlayCheckbox">Enable Colour Overlay</label>
+    <br>
+    <label class="gemini-label">Powered by Gemini</label>
+    <br>
+
+    <!-- Slider for colour filter strength -->
+    <div class="strength-control">
+      <h4>Colour Filter Strength:</h4>
+      <input style="width: 200px" type="range" min="0" max="100" value="80">
+      <br>
+      <label style="position: absolute; left: 20px">0</label>
+      <label style="position: absolute; right: 20px">100</label>
+      <br>
+    </div>
+    <br>
+    
+  </div>
+
+  <!-- Emcolour JS -->
   <script src="popup.js"></script>
 </body>
 </html>
